@@ -1,0 +1,29 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+*.log
+
+# Ignore temp/test files
+temp/
+tests/
+*.DS_Store
+
+# Ignore dev-only folders
+.vscode/
+.env
+.env.*
+*.env
+.git/
+.gitignore
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# Ignore build artifacts
+*.egg-info/
+dist/
+build/
