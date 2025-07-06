@@ -64,3 +64,45 @@ graph TD
     E --> F[Log + Show Response]
     F --> G[User Feedback]
     G --> H[Feedback Logger + Evaluation]
+```
+
+## 💻 Implementation
+
+### 🔹 A) Unified Chat Flow
+
+The `/unified_chat` API route handles all incoming user prompts. It performs different operations based on the `intent` field:
+
+- Accepts both `prompt` and `intent` in a JSON body.
+- Optimizes the prompt if `intent == "prompt_improvement"`.
+- Uses RAG (Retrieval-Augmented Generation) if `intent == "ask_doc"`.
+- Sends the final prompt to the Mistral or OpenAI backend LLM.
+
+### 🔹 B) Prompt Optimizer
+
+This module improves prompt clarity and effectiveness by applying custom rewriting techniques grounded in prompt engineering principles.
+
+- Applies proven prompt engineering patterns to rephrase or expand input prompts.
+- Logs both the original and optimized prompts for side-by-side analysis.
+- Uses RAG (Retrieval-Augmented Generation) if `intent == "ask_doc"`.
+- Seamlessly integrates into the feedback loop to learn and evolve from user ratings.
+
+### 🔹 C) RAG Module
+
+This component enables document-based answering using FAISS and LangChain.
+
+- Converts user prompt into vector embeddings.
+- Retrieves top 3 most similar document chunks from the FAISS index.
+- Prepends these chunks to the prompt before LLM inference.
+- Enables accurate, source-grounded answers.
+
+### 🔹 C) Feedback & Logging System
+
+This module handles interaction logging and user feedback storage using a lightweight SQLite database. It captures each stage of the prompt processing flow—enabling transparency, traceability, and feedback-driven improvement.
+
+🗃️ Database: prompt_logs
+Each interaction is logged in the prompt_logs table
+
+- Logs every interaction with relevant metadata.
+- Stores both raw and optimized prompt-response pairs.
+- Collects user feedback to continuously refine prompt optimization.
+- Supports future model evaluation and prompt tuning based on feedback.
