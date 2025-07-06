@@ -150,7 +150,9 @@ The original prompt is a simple, unrefined query entered directly by the user wi
 #### 🔸 Optimized Prompt Example
 
 The optimized prompt is a refined version of the original, automatically improved by PromptPal using prompt engineering techniques. It restructures the input to add clarity, context, and intent — resulting in a significantly better LLM response.
+
 ![image](https://github.com/user-attachments/assets/f433a79f-8853-418b-96c7-77baf74d196e)
+
 ![image](https://github.com/user-attachments/assets/1346b341-e3f8-4d37-b604-7911296b461f)
 
 📌 As demonstrated above, the original response was brief and lacked depth — offering only a surface-level explanation. However, after prompt optimization, the response became significantly more informative, structured, and tailored to the user's intent. This highlights PromptPal's ability to enhance LLM interactions by transforming vague queries into clear, high-impact prompts that drive better results.
@@ -223,9 +225,9 @@ If you found this project helpful or inspiring, feel free to star the repo or fo
 
 Made by Sudhanshu Kadam
 
-- 📧 Email: sudhanshukadam052@gmail.com 
-- 🐙 GitHub: [Sudhanshu Kadam]((https://github.com/SUDHANSHUKADAM))  
-- 💼 LinkedIn: [linkedin.com/in/sudhanshu-kadam]((https://www.linkedin.com/in/sudhanshu-kadam/))
+- 📧 Email: sudhanshukadam052@gmail.com  
+- 🐙 GitHub: [Sudhanshu Kadam](https://github.com/SUDHANSHUKADAM)  
+- 💼 LinkedIn: [linkedin.com/in/sudhanshu-kadam](https://www.linkedin.com/in/sudhanshu-kadam/)
 
 ---
 
